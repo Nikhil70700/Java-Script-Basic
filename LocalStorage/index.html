@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div>
+        <button id="addBtn">Add Data to localStorage</button>
+        <button id="getBtn">Get Data from localStorage</button>
+        <button id="removeBtn">Delete Data from localStorage</button>
+    </div>
+
+    <script>
+        const studentBioData={
+            firstName:"Nikhil",
+            lastName:"Kumar",
+            age:25,
+            gender:"Male",
+            grade:"A",
+            courses:["Cyber Security","Python","MERN Full stack"],
+            address:{
+                street:"new Hafeezpet",
+                city:"Hyderabad", 
+                 state:"Telangana",
+                 zipCode:"12345",
+            },
+        };
+
+        //Add to Local Storage
+
+        const addTodoList=()=>{
+            // localStorage.setItem("objectData","studentBioData");
+            localStorage.setItem("objectData",JSON.stringify(studentBioData));
+        };
+
+        //Get from local Storage
+
+        const getTodoList=()=>{
+            const retrievedStudentData=JSON.parse(
+                localStorage.getItem("objectData")
+        );
+        console.log("Retrieved from local Storage:",retrievedStudentData);
+        }
+
+
+
+        //Remove From Local Storage
+
+        const removeTodoList=()=>{
+            const removeData=localStorage.removeItem("objectData");
+            //Varify Removal
+            console.log("Data after Removal",removeData);
+        };
+
+        document.getElementById("addBtn").addEventListener("click",()=>{
+            addTodoList();
+        });
+        document.getElementById("getBtn").addEventListener("click",()=>{
+            getTodoList();
+        });
+        document.getElementById("removeBtn").addEventListener("click",()=>{
+            removeTodoList();
+        })
+
+
+    </script>
+    
+</body>
+</html>
