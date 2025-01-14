@@ -1,10 +1,9 @@
-/* style.css */
 
 /* Global Styles */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(120deg, #ff9a9e, #fad0c4); /* Gradient Background */
+    background: linear-gradient(to right, #AB478E, #75BD1A); /* Gradient Background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,14 +12,21 @@ body {
 }
 
 /* Container for Buttons */
+
+
 div {
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Drop shadow */
-    text-align: center;
-    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for glass effect */
+    border-radius: 16px; /* Smooth rounded corners */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    backdrop-filter: blur(10px); /* Frosted glass blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for added depth */
+    padding: 20px; /* Padding for inner content */
+    width: 350px; /* Fixed width */
+    color: white; /* Text color for contrast */
+    text-align: center; /* Center align content inside */
 }
+
 
 /* Buttons Styling */
 button {
