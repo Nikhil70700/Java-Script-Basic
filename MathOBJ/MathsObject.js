@@ -10,7 +10,7 @@
 
 //** Math.PI: Represents the mathematical constant pi (π) */
 
-const piValue=Math.PI;
+const piValue=Math.PI.toFixed(3).toString().length;
 
 console.log(piValue);
 
